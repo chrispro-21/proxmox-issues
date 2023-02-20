@@ -1,0 +1,46 @@
+- Issues with Proxmox VE (YES I KNOW Most of these are VMWare features)
+	- GUI #GUI
+		- VM Management
+		  id:: cb153688-4ce9-4989-9a4c-46d8d1201bb3
+			- Cannot sort VMs by #Essential
+				- Datastore
+				- Network
+				- Host
+			- No Import or Export of VM through OVA in GUI #Essential
+			- Warning that Proxmox QEMU Guest Agent is not installed
+				- Install Proxmox QEMU Tools as a button #Would-be-nice
+			- When selecting Guest OS, display the icon
+			- Use VM name instead of ID / hide ID
+				- Ties in with ((63f398b7-38c2-4fe8-a051-fa159553854a))
+				- ALLOW SPACES IN THE NAME
+		- Leaving Cluster is a massive pain in the ass #Essential
+		- No Datastore Browser #Would-be-nice
+		  id:: 1fb48e83-d24a-4b02-9a9d-0e94d31b9e1d
+		- Head #Would-be-nice
+			- No advanced setup by head like [Xen xsconsole](https://github.com/xcp-ng/xcp) / VMware
+	- Storage #Issues
+		- ISCSI Storage cannot act as filesystem for storage of ISOs and files #Would-be-nice
+		- VM configs not stored with VM files #Essential
+			- ((1fb48e83-d24a-4b02-9a9d-0e94d31b9e1d)) Cannot import VM from datastore on another server
+				- Proxmox Backup Server has something like this for their datastore browser
+	- Backend
+		- Backups
+			- Cannot create/restore host config from backup natively from GUI #Essential
+				- XML/tarDB download would be nice
+					- Examples
+						- TrueNAS
+						- pfSense
+		- Why is the VM-id not unique #Would-be-nice
+		  id:: 63f398b7-38c2-4fe8-a051-fa159553854a
+			- Ties in with ((cb153688-4ce9-4989-9a4c-46d8d1201bb3))
+			- All Start at 100 for new install
+				- Possible options
+					- random integer from uuid
+					- Use smBIOS ID
+	- Multi Cluster Management #GUI
+		- [Currently in progress](https://pve.proxmox.com/wiki/Roadmap#Roadmap)
+	- Networking
+		- VLAN management
+		- Distributed Switches #GUI
+			- GUI for central Networking management #Would-be-nice
+				- add host to switch
